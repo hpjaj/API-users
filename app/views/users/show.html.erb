@@ -1,8 +1,10 @@
-<%= link_to "Home", users_path %>
-<br>
-<br>
-<p><%= @user.first_name + " " + @user.last_name %></p>
-<p><%= @user.email %></p>
-<br>
-<%= link_to "Edit", edit_user_path %>
-<%= link_to "Delete", @user, method: :delete, data: { confirm: "Delete this user?" } %>
+<div class="container margin-top">
+  <%= link_to "Home", users_path %>
+  <br>
+  <br>
+  <p><%= @user.first_name + " " + @user.last_name %></p>
+  <p><%= @user.email %></p>
+  <br>
+  <%= link_to "Edit", edit_user_path, class: "btn btn-success" %>
+  <%= link_to "Delete", @user, method: :delete, data: { confirm: "Delete this user?" }, class: "btn btn-danger pull-right" %>
+</div>

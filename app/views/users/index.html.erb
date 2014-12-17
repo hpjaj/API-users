@@ -1,7 +1,9 @@
-<p><%= link_to "Create User", new_user_path %></p>
-<br>
-<% @users.each do |user| %>
-  <p><%= link_to (user.first_name + " " + user.last_name), user %>, <%= user.email %></p>
-<% end %>
-<br>
-<p>Total users: <%= @users.length %></p>
+<div class="container margin-top">
+  <p><%= link_to "Create User", new_user_path, class: "btn btn-success" %></p>
+  <br>
+  <% @users.each do |user| %>
+    <p><%= link_to (user.first_name + " " + user.last_name), user %>, <%= user.email %></p>
+  <% end %>
+  <br>
+  <p>Total users: <%= @users.length %></p>
+</div>

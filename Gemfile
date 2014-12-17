@@ -44,3 +44,6 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.0'
 end
+
+gem 'faker'
+gem 'bootstrap-sass', '~> 3.3.1'
