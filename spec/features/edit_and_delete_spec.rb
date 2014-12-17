@@ -21,4 +21,14 @@ describe "An existing user" do
     expect( page ).to_not have_content("997654321")
   end
 
+  it "can delete an existing user" do
+    visit "/"
+    click_link "Jane Doe"
+    click_link "Delete"
+    expect( current_path ).to eq users_path
+    expect( page ).to_not have_content("Janie Doe")
+    expect( page ).to_not have_content("Jane@example.com")
+    expect( page ).to_not have_content("987654321")
+  end
+
 end
