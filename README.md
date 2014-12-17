@@ -4,6 +4,7 @@ App for creating, modifying, and deleting users.  Returns formatted responses in
 
 Gemfile contains the following relevant gems:
 
+```ruby
 gem 'rails', '4.1.8'
 gem 'sqlite3'
 
@@ -15,3 +16,4 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 4.0'
 end
+```
