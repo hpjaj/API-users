@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       end
     else
       respond_to do |format|
-        format.json { render json: @user.errors.full_messages }
+        format.json { render json: @user.errors.full_messages, status: :unprocessable_entity }
         format.html do
           flash[:error] = @user.errors.full_messages
           render :new
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
       end
     else
       respond_to do |format|
-        format.json { render json: @user.errors.full_messages }
+        format.json { render json: @user.errors.full_messages, status: :unprocessable_entity }
         format.html do
           flash[:error] = @user.errors.full_messages
           render :edit
