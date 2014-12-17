@@ -1,0 +1,8 @@
+<%= form_for @user do |f| %>
+  <p><%= f.text_field :first_name, placeholder: "First name" %></p>
+  <p><%= f.text_field :last_name, placeholder: "Last name" %></p>
+  <p><%= f.text_field :email, placeholder: "Email address" %></p>
+  <p><%= f.text_field :social_security_number, placeholder: "Social security number" %></p>
+  <p><%= link_to "Cancel", :back %></p>
+  <p><%= f.submit "Save" %></p>
+<% end %>
