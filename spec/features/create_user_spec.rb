@@ -11,7 +11,10 @@ describe "A new user" do
     fill_in 'Email address', with: "John@example.com"
     fill_in 'Social security number', with: "123456789"
     click_button "Save"
-    
+    expect( current_path ).to eq users_path
+    expect( page ).to have_content("John Doe")
+    expect( page ).to have_content("John@example.com")
+    expect( page ).to_not have_content("123456789")
   end
 
 
