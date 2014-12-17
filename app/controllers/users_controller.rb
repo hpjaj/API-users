@@ -36,6 +36,24 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      respond_to do |format|
+        format.json { render json: @user.to_json, status: :no_content }
+        format.html { redirect_to users_path }
+      end
+    else
+      respond_to do |format|
+        format.json { render json: @user.errors.full_messages }
+        format.html do
+          flash[:error] = @user.errors.full_messages
+          render :edit
+        end
+      end
+    end
+  end
+
   private
 
   def user_params
