@@ -10,8 +10,10 @@
 <body>
 
   <% if flash[:error] %>
-    <div><%= flash[:error] %></div>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <div class="alert alert-warning">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:error] %>
+    </div>
   <% end %>
 
 <%= yield %>
